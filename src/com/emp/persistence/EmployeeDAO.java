@@ -8,10 +8,10 @@ public class EmployeeDAO {
 	
 	public void saveEmployee(Employee employee) {
 		DatabaseConnectionManager connectionManager = new DatabaseConnectionManager();
-		connectionManager.connect();
+		//connectionManager.connect();
 		//connectionManager.getConnectionObject().prepareStatement("INSERT INTO ...");
 		System.out.println("Saving " + employee);
-		connectionManager.disconnect();		
+		//connectionManager.disconnect();		
 	}
 	
 	public void deleteEmployee(Employee emp) {

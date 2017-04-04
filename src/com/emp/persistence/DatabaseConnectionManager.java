@@ -10,7 +10,7 @@ public class DatabaseConnectionManager {
 
 	private static DatabaseConnectionManager connectionInstance = new DatabaseConnectionManager();
 
-	private DatabaseConnectionManager() {
+	public DatabaseConnectionManager() {
 
 	}
 
