@@ -7,6 +7,6 @@ Create an application that:
 - provides the ability to print reports in XML and CSV format.
 
 ## UML Design
-
+[!](https://raw.githubusercontent.com/vgorbic1/HospitalEmployeeManagementSystem/master/documentation/images/employee-management.jpg)
 
 
