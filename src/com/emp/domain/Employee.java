@@ -1,6 +1,6 @@
 package com.emp.domain;
 
-public class Employee {
+public abstract class Employee {
 
 	private long id;
 	private String name;
@@ -8,13 +8,14 @@ public class Employee {
 	private boolean working;
 
 	public Employee(long id, String name, String department, boolean working) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.department = department;
 		this.working = working;
 	}
 
+	public abstract void performDuties();
+	
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", department=" + department + ", working=" + working + "]";

@@ -1,32 +1,25 @@
 package com.emp;
 
+import com.emp.domain.Doctor;
 import com.emp.domain.Employee;
-import com.emp.persistence.DatabaseConnectionManager;
-import com.emp.persistence.EmployeeDAO;
-import com.emp.report.EmployeeReportFormatter;
-import com.emp.report.FormatType;
-import com.emp.report.ReportFormatter;
+import com.emp.domain.Nurse;
 
 public class ClientModule {
 
 	public static void main(String[] args) {
 		// create employee
-		Employee employee = new Employee(1, "James", "Administration", true);
+		Employee james = new Doctor(1, "James", "Administration", true);
 
-		ClientModule.hireNewEmployee(employee);
-
-		ClientModule.printEmployeeReport(employee, FormatType.XML);
+		ClientModule.callUpon(james);
+		
+		Employee mary = new Nurse(1, "Mary", "Administration", true);
+		
+		ClientModule.callUpon(mary);
 
 	}
 
-	public static void hireNewEmployee(Employee employee) {
-		EmployeeDAO dao = new EmployeeDAO();
-		dao.saveEmployee(employee);
-	}
-
-	public static void printEmployeeReport(Employee employee, FormatType formatType) {
-		EmployeeReportFormatter formatter = new EmployeeReportFormatter(employee, formatType);
-		System.out.println(formatter.getFormattedEmployee());
+	public static void callUpon(Employee employee) {
+		employee.performDuties();
 	}
 
 }
